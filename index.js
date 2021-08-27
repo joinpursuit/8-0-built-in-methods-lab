@@ -3,7 +3,11 @@
  * @param {object} assignments - An object with assignments organized by category.
  * @returns {string[]} An array of strings, which represent all of the keys in the object.
  */
-function getAssignmentTypes(assignments) {}
+function getAssignmentTypes(assignments) {
+  let type = Object.keys(assignments) 
+
+  return type
+}
 
 /**
  * Returns an integer that represents the score as a percentage.
@@ -12,7 +16,16 @@ function getAssignmentTypes(assignments) {}
  * @param {number} score.max - The maximum amount of points that could be received on the assignment.
  * @returns {number} A rounded integer, representing a percentage.
  */
-function getPercentageScore(score) {}
+function getPercentageScore(score) {
+  //A rounded integer, representing a percentage.
+
+// let percent = 0;
+const scores = Object.values(score);
+// console.log(Object.values(score))   ex)   [ 14, 18 ]
+const percent = Math.round((scores[0] / scores[1]) * 100)
+
+return percent
+}
 
 /**
  * Given two score objects, returns an integer that represents the highest percentage received.
