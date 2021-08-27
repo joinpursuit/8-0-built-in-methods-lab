@@ -27,7 +27,15 @@ function getPercentageScore(score) {
  * @param {object} score2 - An object representing another score of an assignment. Has the same shape as `score1`.
  * @returns {number} A rounded integer, representing the highest percentage scored among the two given scores.
  */
-function getHighestOfTwoScores(score1, score2) {}
+function getHighestOfTwoScores(score1, score2) {
+  // Declare a variable for score1
+  // Math.round method rounds the entire percentage operation
+  let first =  Math.round(score1.received / score1.max * 100)
+  // Declare a variable for score2: 
+  let second = Math.round(score2.received / score2.max * 100)
+  // highest percentage value from two scores
+  return Math.max(first, second);
+}
 
 // Don't change anything below this line.
 module.exports = {
