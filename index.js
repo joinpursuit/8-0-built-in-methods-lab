@@ -30,7 +30,7 @@ function getPercentageScore(score) {
 function getHighestOfTwoScores(score1, score2) {
   let score1Percentage = getPercentageScore(score1);
   let score2Percentage = getPercentageScore(score2);
-  return Math.max(score1Percentage, score2Percentage);
+  return Math.max(score1Percentage, score2Percentage); 
 }
 
 // Don't change anything below this line.
