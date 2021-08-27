@@ -29,9 +29,8 @@ function getPercentageScore(score) {
 function getHighestOfTwoScores(score1, score2) {
   let percentage1 = getPercentageScore(score1);
   let percentage2 = getPercentageScore(score2);
-  // console.log(percentage1)
+  
   return Math.max(Math.round(percentage2), Math.round(percentage1))
-
   // return percentage2 > percentage1? Math.round(percentage2) : Math.round(percentage1);
 }
 
