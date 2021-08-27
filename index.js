@@ -29,7 +29,7 @@ function getPercentageScore(score) {
 function getHighestOfTwoScores(score1, score2) {
   //let highOfScore1 = Math.round((score1.received / score1.max * 100))
   //get the percentage value from object score1
-  //let highOfScore2 = Math.round((score2.received / score2.max * 100))
+  //let highOfScore2 = Math.round((score2.received / score2.max * 100))git pu
   //get the percentage value from object score2
   let highOfScore1 = getPercentageScore(score1)
   let highOfScore2 = getPercentageScore(score2)
