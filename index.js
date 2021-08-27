@@ -38,8 +38,7 @@ function getHighestOfTwoScores(score1, score2) {
   return Math.max(getPercentageScore(score1), getPercentageScore(score2));
 };
 
-console.log(getHighestOfTwoScores(assignmentsData.projects[0].score,
-  assignmentsData.projects[1].score))
+// console.log(getHighestOfTwoScores(assignmentsData.projects[0].score, assignmentsData.projects[1].score))
 
 // Don't change anything below this line.
 module.exports = {
