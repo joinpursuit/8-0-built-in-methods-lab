@@ -14,7 +14,12 @@ function getAssignmentTypes(assignments) {
  * @param {number} score.max - The maximum amount of points that could be received on the assignment.
  * @returns {number} A rounded integer, representing a percentage.
  */
-function getPercentageScore(score) {}
+function getPercentageScore(score) {
+  let scoreReceived = score.received;
+  let maxScore = score.max; 
+  let percentageScore = (scoreReceived / maxScore) * 100;
+  return Math.round(percentageScore);
+}
 
 /**
  * Given two score objects, returns an integer that represents the highest percentage received.
