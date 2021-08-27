@@ -1,3 +1,20 @@
+const assignments = {
+  quizzes: [
+    { title: "Arrays", score: { received: 4, max: 5 } },
+    { title: "Objects", score: { received: 5, max: 6 } },
+    { title: "Loops", score: { received: 2, max: 4 } },
+  ],
+  labs: [
+    { title: "Arrays", score: { received: 0, max: 1 } },
+    { title: "Objects", score: { received: 1, max: 1 } },
+    { title: "Loops", score: { received: 1, max: 1 } },
+  ],
+  projects: [
+    { title: "Music Box", score: { received: 14, max: 18 } },
+    { title: "Calculator", score: { received: 12, max: 12 } },
+  ],
+};
+
 /**
  * Returns all of the "categories" from the assignments object.
  * @param {object} assignments - An object with assignments organized by category.
@@ -6,6 +23,8 @@
 function getAssignmentTypes(assignments) {
   return Object.keys(assignments);
 }
+
+console.log(getAssignmentTypes(assignments))
 
 /**
  * Returns an integer that represents the score as a percentage.
@@ -17,6 +36,8 @@ function getAssignmentTypes(assignments) {
 function getPercentageScore(score) {
   return Math.round(score.received/score.max * 100);
 }
+
+console.log(getPercentageScore(assignments.projects[0].score))
 
 /**
  * Given two score objects, returns an integer that represents the highest percentage received.
