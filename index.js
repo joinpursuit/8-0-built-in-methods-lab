@@ -39,12 +39,7 @@ function getPercentageScore(score) {
 function getHighestOfTwoScores(score1, score2) {
   let score1Int = Math.round(score1.received / score1.max * 100)
   let score2Int = Math.round(score2.received / score2.max * 100)
-  
-  if (score1Int > score2Int) {
-    return score1Int
-  } else {
-    return score2Int
-  }
+  return Math.max(score1Int, score2Int)
 }
 
 
