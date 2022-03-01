@@ -4,8 +4,7 @@
  * @returns {string[]} An array of strings, which represent all of the keys in the object.
  */
 function getAssignmentTypes(assignments) {
-  let x = Object.keys(assignments);
-  return x;
+  return Object.keys(assignments);
 }
 
 /**
@@ -31,11 +30,8 @@ function getPercentageScore(score) {
 function getHighestOfTwoScores(score1, score2) {
   let num1 = Math.round((score1.received / score1.max) * 100);
   let num2 = Math.round((score2.received / score2.max) * 100);
-  if (num1 > num2) {
-    return num1;
-  } else {
-    return num2;
-  }
+  let bigger = Math.max(num1, num2);
+  return bigger;
 }
 
 // Don't change anything below this line.
