@@ -15,8 +15,7 @@ function getAssignmentTypes(assignments) {
  * @returns {number} A rounded integer, representing a percentage.
  */
 function getPercentageScore(score) {
-  const percentageScore = (score.received / score.max) * 100;
-  return Math.round(percentageScore);
+  return Math.round((score.received / score.max) * 100);
 }
 
 /**
