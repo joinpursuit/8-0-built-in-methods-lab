@@ -17,10 +17,7 @@ for (let assignment in assignments){
  * @returns {number} A rounded integer, representing a percentage.
  */
 function getPercentageScore(score) {
-  let percentage = score.received / score.max  * 100
-for (let assignment of assignments){
-  return percentage
-}
+return Math.round(score.received / score.max * 100)
 
 }
 
