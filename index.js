@@ -31,15 +31,15 @@ function getPercentageScore(score) {
  */
 
 function getHighestOfTwoScores(score1, score2) {
-  let highest1 = Math.round(score1.received / score1.max * 100)
-  let highest2 = Math.round(score2.received / score2.max * 100)
-  if (highest1 > highest2) { return highest1 }
-  else { return highest2 }
+  let highest1 = getPercentageScore(score1)
+  let highest2 = getPercentageScore(score2)
+  //return highest1 > highest2 ? highest1 : highest2 // ===> First solution
+  return Math.max(highest1, highest2) // ===> Second solution
 }
 
 
 
-// Don't change anything below this line.
+// Don't change any code below this line.
 
 module.exports = {
   getAssignmentTypes,
