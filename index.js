@@ -30,7 +30,9 @@ return Math.round(score.received / score.max * 100)
  * @returns {number} A rounded integer, representing the highest percentage scored among the two given scores.
  */
 function getHighestOfTwoScores(score1, score2) {
-
+let firstScore = getPercentageScore(score1)
+let secondScore = getPercentageScore (score2)
+return Math.max(firstScore,secondScore)
 
 }
 
