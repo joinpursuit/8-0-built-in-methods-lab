@@ -36,8 +36,8 @@ function getHighestOfTwoScores(score1, score2) {
   let score1Val = Object.values(score1);
   let score2Val = Object.values(score2);
 
-  let percentage1 = Math.floor((score1Val[0] / score1Val[1]) * 100);
-  let percentage2 = Math.floor((score2Val[0] / score2Val[1]) * 100);
+  let percentage1 = Math.round((score1Val[0] / score1Val[1]) * 100);
+  let percentage2 = Math.round((score2Val[0] / score2Val[1]) * 100);
 
   return percentage1 > percentage2 ? percentage1 : percentage2;
 
