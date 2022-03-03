@@ -24,23 +24,7 @@ function getAssignmentTypes(assignments) {
 // }
 
 function getPercentageScore(score) {
-  // Long Way:
-  // let percent = 0;
-  // let firstNum;
-  // let secondNum;
-  // for(let number in score){
-  //   if(number === 'received'){
-  //     firstNum = score[number];
-  //     console.log(firstNum)
-  //   } else if (number === 'max'){
-  //     secondNum = score[number];
-  //     console.log(secondNum);
-  //   }
-  // }
-  // percent = (firstNum / secondNum) * 100
-  let values = Object.values(score);
-  let percent = (values[0] / values[1])* 100;
-  return Math.round(percent);
+  return Math.round((score["received"] / score["max"])* 100);
 }
 
 /**
