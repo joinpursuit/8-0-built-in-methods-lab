@@ -15,8 +15,7 @@ function getAssignmentTypes(assignments) {
  * @returns {number} A rounded integer, representing a percentage.
  */
 function getPercentageScore(score) {
-  let scores = Object.values(score)
-  let percentage = (scores[0]/scores[1]) * 100
+  let percentage = (score.received/score.max) * 100
 
   return Math.round(percentage)
 
@@ -31,13 +30,11 @@ function getPercentageScore(score) {
  * @returns {number} A rounded integer, representing the highest percentage scored among the two given scores.
  */
 function getHighestOfTwoScores(score1, score2) {
-  let score1Val = Object.values(score1)
-  let score2Val = Object.values(score2)
 
-  let percentage1 = Math.round((score1Val[0]/score1Val[1]) * 100)
-  let percentage2 = Math.round((score2Val[0]/score2Val[1]) * 100)
+  let percentage1 = getPercentageScore(score1)
+  let percentage2 = getPercentageScore(score2)
 
-  return percentage1 > percentage2 ? percentage1 : percentage2
+  return Math.max(percentage1, percentage2)
 }
 
 // Don't change anything below this line.
