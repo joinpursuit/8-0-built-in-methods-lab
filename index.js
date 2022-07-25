@@ -16,7 +16,7 @@ function getAssignmentTypes(assignments) {
  */
 function getPercentageScore(score) {
   let percentage = score.received/score.max * 100
-  //Not needed but created a variable that makes the math math. 
+
   return Math.round(percentage)
 }
 
@@ -31,16 +31,8 @@ function getPercentageScore(score) {
  */
 function getHighestOfTwoScores(score1, score2) {
   let firstScore = getPercentageScore(score1)
-  let secondScore = getPercentageScore(score2)
-  //Pulling from the already created function to utilize the params. 
+  let secondScore = getPercentageScore(score2) 
   return Math.max(firstScore, secondScore)
-
-
-  /*
-  ALTERNATIVE CODE: 
-  let sc0re1 = score1.received/score1.max * 100
-  let sc0re2 = score2.received/score2.max * 100
-  */
 }
 
 // Don't change anything below this line.
