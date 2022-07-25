@@ -7,7 +7,6 @@ function getAssignmentTypes(assignments) {
   arr = [...Object.keys(assignments)]
   return arr
 }
-// console.log('hi')
 /**
  * Returns an integer that represents the score as a percentage.
  * @param {object} score - An object representing the score of an assignment.
