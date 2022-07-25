@@ -18,10 +18,10 @@ function getAssignmentTypes(assignments) {
  */
 function getPercentageScore(score) {
   //The Math.round() function returns the value of a number rounded to the nearest integer.
-  // to get precenta
+  // to get precentage between two scores --> ((numba -NumB)/numB)*100
   //const percentScore = ((score.max - score.received) / score.received) *100
  const percentScore = (score.received *100)/ score.max
-  console.log(percentScore)
+  //console.log('%%', percentScore)
 
   return Math.round(percentScore)
 }
@@ -35,7 +35,16 @@ function getPercentageScore(score) {
  * @returns {number} A rounded integer, representing the highest percentage scored among the two given scores.
  */
 function getHighestOfTwoScores(score1, score2) {
-  //use Nath.max() to return the highest of any amount of numbers.
+  //use Math.max() to return the highest of any amount of numbers.
+  // const highestScore1 = Math.max(score1);
+  // const highestScore2 = Math.max(score2);
+  // const rounded = Math.round(highestScore1,highestScore2)
+  // return rounded
+  const percentScore1 = Math.round((score1.received *100)/ score1.max);
+  const percentScore2 = Math.round((score2.received *100)/ score2.max);
+  console.log("!! ", percentScore1)
+  console.log('*** ', percentScore2)
+  return Math.max(percentScore1 , percentScore2)
 }
 
 // Don't change anything below this line.
