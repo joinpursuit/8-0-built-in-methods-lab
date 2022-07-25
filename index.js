@@ -16,10 +16,9 @@ function getAssignmentTypes(assignments) {
  * @returns {number} A rounded integer, representing a percentage.
  */
 function getPercentageScore(score) {
-  let scoreResult = score.received / score.max
-  let scorePercent = (scoreResult * 100).toFixed(0)
-  console.log(scorePercent)
-  return Number(scorePercent)
+  let scoreResult = Math.round((score.received / score.max) * 100)  
+  // console.log(scorePercent)
+  return scoreResult
 }
 
 /**
@@ -31,17 +30,20 @@ function getPercentageScore(score) {
  * @returns {number} A rounded integer, representing the highest percentage scored among the two given scores.
  */
 function getHighestOfTwoScores(score1, score2) {
-  let scoreResult1 = score1.received / score1.max
-  let scorePercent1 = (scoreResult1 * 100).toFixed(0)
+  let scoreResult1 = Math.round((score1.received / score1.max) * 100)
+  // let scorePercent1 = (scoreResult1 * 100).toFixed(0)
 
-  let scoreResult2 = score2.received / score2.max
-  let scorePercent2 = (scoreResult2 * 100).toFixed(0)
+  let scoreResult2 = Math.round((score2.received / score2.max) * 100)
+  // let scorePercent2 = (scoreResult2 * 100).toFixed(0)
 
-  console.log(scorePercent1)
-  if (scorePercent1 > scorePercent2){
-    return Number(scorePercent1)
-  }else (scorePercent2 > scorePercent1) {
-    return Number(scorePercent2)
+  // let highest = Math.max(scoreResult1,scoreResult2)
+
+  // return highest
+
+  if (scoreResult1 > scoreResult2){
+    return scoreResult1
+  }else {
+    return scoreResult2
   }
 }
 
