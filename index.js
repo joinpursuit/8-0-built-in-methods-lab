@@ -36,6 +36,7 @@ function getPercentageScore(score) {
  */
 function getHighestOfTwoScores(score1, score2) {
   //use Math.max() to return the highest of any amount of numbers.
+  //follow methods from previous function to solve for score1 & score2
   // const highestScore1 = Math.max(score1);
   // const highestScore2 = Math.max(score2);
   // const rounded = Math.round(highestScore1,highestScore2)
