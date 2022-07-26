@@ -27,10 +27,7 @@ function getPercentageScore(score) {
  * @returns {number} A rounded integer, representing the highest percentage scored among the two given scores.
  */
 function getHighestOfTwoScores(score1, score2) {
-  return Math.max(
-    Math.round((score1.received / score1.max) * 100),
-    Math.round((score2.received / score2.max) * 100)
-  );
+  return Math.max(getPercentageScore(score1), getPercentageScore(score2));
 }
 
 // Don't change anything below this line.
