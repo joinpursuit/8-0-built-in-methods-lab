@@ -5,9 +5,6 @@
  */
 function getAssignmentTypes(assignments) {
   let keys = Object.keys(assignments);
-  for (let categories in assignments) {
-    console.log(Object.keys(assignments));
-  }
   return keys;
 }
 
