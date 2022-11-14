@@ -3,7 +3,12 @@
  * @param {object} assignments - An object with assignments organized by category.
  * @returns {string[]} An array of strings, which represent all of the keys in the object.
  */
-function getAssignmentTypes(assignments) {}
+ function getAssignmentTypes( assignments ) {
+
+  let keys = Object.keys( assignments );
+  return keys;
+
+} // ends getAssignmentTypes()
 
 /**
  * Returns an integer that represents the score as a percentage.
