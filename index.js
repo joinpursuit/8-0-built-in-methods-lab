@@ -5,8 +5,7 @@
  */
  function getAssignmentTypes( assignments ) {
 
-  let keys = Object.keys( assignments );
-  return keys;
+  return Object.keys( assignments );
 
 } // ends getAssignmentTypes()
 
