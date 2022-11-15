@@ -4,7 +4,7 @@
  * @returns {string[]} An array of strings, which represent all of the keys in the object.
  */
 function getAssignmentTypes(assignments) {
-   return Object.keys(assignments)
+  return Object.keys(assignments)
 }
 
 /**
@@ -28,6 +28,30 @@ function getPercentageScore(score) {
  */
 function getHighestOfTwoScores(score1, score2) {
   return Math.max(Math.round((score1.received / score1.max) * 100), Math.round((score2.received / score2.max) * 100));
+
+  // After I solved the function using the lines above, I wanted to see if I could do the same thing, but without using .max.
+  // Below is the carnage that resulted...
+  
+  // let scoreOne = Math.round((score1.received / score1.max) * 100);
+  // let scoreTwo = Math.round((score2.received / score2.max) * 100);
+  
+  // if (toString(scoreOne).split('.')[1] >= 5) {
+  //   Math.ceil(scoreOne);
+  // } else if (toString(scoreOne).split('.')[1] < 5) {
+  //   Math.floor(scoreOne);
+  // }
+
+  // if (toString(scoreTwo).split('.')[1] >= 5) {
+  //   Math.ceil(scoreTwo);
+  // } else if (toString(scoreTwo).split('.')[1] < 5) {
+  //   Math.floor(scoreTwo);
+  // }
+
+  // if (scoreOne > scoreTwo) {
+  //   return scoreOne;
+  // } else {
+  //   return scoreTwo
+  // }
 }
 
 // Don't change anything below this line.
