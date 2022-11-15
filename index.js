@@ -4,8 +4,10 @@
  * @returns {string[]} An array of strings, which represent all of the keys in the object.
  */
 function getAssignmentTypes(assignments) {
+  
   return Object.keys(assignments)
-  }
+  
+}
 
 /**
  * Returns an integer that represents the score as a percentage.
@@ -17,6 +19,7 @@ function getAssignmentTypes(assignments) {
 function getPercentageScore(score) {
   
   return Math.floor(Math.round((score.received/score.max) * 100))
+
 }
 
 /**
@@ -28,14 +31,10 @@ function getPercentageScore(score) {
  * @returns {number} A rounded integer, representing the highest percentage scored among the two given scores.
  */
 function getHighestOfTwoScores(score1, score2) {
-
   let a = Math.floor(Math.round((score1.received/score1.max) * 100));
-
   let b = Math.floor(Math.round((score2.received/score2.max) * 100));
 
   return Math.max(a,b)
-
-
 }
 
 // Don't change anything below this line.
