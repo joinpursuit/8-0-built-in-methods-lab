@@ -63,7 +63,7 @@ describe("getPercentageScore()", () => {
   });
 });
 
-describe("getHighestOfTwoScores()", () => {
+describe.only("getHighestOfTwoScores()", () => {
   test("should return the highest percentage value from two scores", () => {
     const actual = getHighestOfTwoScores(
       assignments.labs[0].score,
