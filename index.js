@@ -29,7 +29,8 @@ function getPercentageScore(score) {
 function getHighestOfTwoScores(score1, score2) {
   const scoOnePer = Math.round((score1.received / score1.max) * 100);
   const scoTwoPer = Math.round((score2.received / score2.max) * 100);
-  return scoOnePer > scoTwoPer ? scoOnePer : scoTwoPer;
+  return Math.max(scoOnePer, scoTwoPer);
+  //return scoOnePer > scoTwoPer ? scoOnePer : scoTwoPer;
 }
 
 // Don't change anything below this line.
