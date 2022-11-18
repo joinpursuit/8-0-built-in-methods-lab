@@ -22,10 +22,7 @@ const getPercentageScore = score => Math.round(score.received/score.max * 100)
  * @param {object} score2 - An object representing another score of an assignment. Has the same shape as `score1`.
  * @returns {number} A rounded integer, representing the highest percentage scored among the two given scores.
  */
-function getHighestOfTwoScores(score1, score2) {
-  const score = getPercentageScore
-  return score(score1) > score(score2) ? score(score1) : score(score2)
-}
+const getHighestOfTwoScores = (score1, score2) => Math.max(getPercentageScore(score1), getPercentageScore(score2))
 
 /*
 Alternatively this also works:
