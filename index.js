@@ -4,7 +4,7 @@
  * @returns {string[]} An array of strings, which represent all of the keys in the object.
  */
 function getAssignmentTypes(assignments) {
-  Object.keys(assignments);
+  return Object.keys(assignments);
 }
 
 /**
@@ -14,7 +14,9 @@ function getAssignmentTypes(assignments) {
  * @param {number} score.max - The maximum amount of points that could be received on the assignment.
  * @returns {number} A rounded integer, representing a percentage.
  */
-function getPercentageScore(score) {}
+function getPercentageScore(score) {
+  
+}
 
 /**
  * Given two score objects, returns an integer that represents the highest percentage received.
